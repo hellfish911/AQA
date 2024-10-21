@@ -48,10 +48,7 @@ capitalized_words = [
 print(f'Кількість слів з Великої літери: {len(capitalized_words)}')
 
 # Task 06
-second_tom_position = (
-    adventures_of_tom_sawyer.lower().split().index('tom',
-    adventures_of_tom_sawyer.lower().split().index('tom') + 1)
-)
+second_tom_position = adventures_of_tom_sawyer.find('Tom', adventures_of_tom_sawyer.index('Tom')+1)
 print(f'Позиція другого слова "Tom": {second_tom_position + 1}')
 
 # Task 07

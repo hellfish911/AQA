@@ -42,8 +42,7 @@ people_records[SWAP_SECOND_INDEX] = temp
 
 # Print the modified list after insertion and swapping
 print('Modified List:')
-for person in people_records:
-    print(person)
+print(*people_records, sep='\n')
 
 # Step 3: Check if people with specified indexes have age >= AGE_THRESHOLD
 age_check = all(

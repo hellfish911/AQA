@@ -19,16 +19,16 @@ class Student:
         self.avg_score = avg_score
         self.age = age
 
-    def scorer(self):
+    def scorer(self, new_score):
         """
-        Modify the student's average score if it's less than or equal to 0.
+        Update the student's average score.
 
-        Prints the student's details after modification.
+        Args:
+            new_score (float): The new average score to set.
         """
-        if self.avg_score <= 0:
-            self.avg_score += 1
+        self.avg_score = new_score
         print(f'{self.name}, {self.surname}, {self.avg_score}, {self.age}')
 
 
 student = Student(name='FirstName', surname='LastName', avg_score=0, age=43)
-student.scorer()
+student.scorer(5)

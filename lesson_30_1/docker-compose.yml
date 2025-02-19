@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: testdb
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpass
+    networks:
+      - db-network
+
+  app:
+    build: .
+    depends_on:
+      - postgres
+    networks:
+      - db-network
+    environment:
+      POSTGRES_HOST: postgres
+
+networks:
+  db-network:
+    driver: bridge
